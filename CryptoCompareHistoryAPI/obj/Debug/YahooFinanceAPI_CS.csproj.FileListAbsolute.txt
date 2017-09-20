@@ -1,0 +1,13 @@
+G:\Software Code\Metatrader\YahooFinanceAPI\YahooFinanceAPI_CS\bin\Debug\YahooFinanceAPI.pdb
+G:\Software Code\Metatrader\YahooFinanceAPI\YahooFinanceAPI_CS\obj\Debug\YahooFinanceAPI_CS.csprojResolveAssemblyReference.cache
+G:\Software Code\Metatrader\YahooFinanceAPI\YahooFinanceAPI_CS\obj\Debug\YahooFinanceAPI.pdb
+G:\Software Code\Metatrader\YahooFinanceAPI\YahooFinanceAPI_CS\bin\Debug\YahooFinanceAPI.exe
+G:\Software Code\Metatrader\YahooFinanceAPI\YahooFinanceAPI_CS\obj\Debug\YahooFinanceAPI.exe
+H:\YahooFinanceAPI\YahooFinanceAPI_CS\obj\Debug\YahooFinanceAPI.exe
+H:\YahooFinanceAPI\YahooFinanceAPI_CS\obj\Debug\YahooFinanceAPI.pdb
+H:\Zorro\YahooFinanceAPI.exe
+H:\Zorro\YahooFinanceAPI.pdb
+E:\CryptoCompareHistoryAPI\YahooFinanceAPI_CS\obj\Debug\YahooFinanceAPI.exe
+E:\CryptoCompareHistoryAPI\YahooFinanceAPI_CS\obj\Debug\YahooFinanceAPI.pdb
+E:\Zorro\YahooFinanceAPI.exe
+E:\CryptoCompareHistoryAPI\YahooFinanceAPI_CS\obj\Debug\YahooFinanceAPI_CS.csprojResolveAssemblyReference.cache

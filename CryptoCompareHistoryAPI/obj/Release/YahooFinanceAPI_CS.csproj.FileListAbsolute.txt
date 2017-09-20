@@ -1,0 +1,8 @@
+G:\Software Code\Metatrader\YahooFinanceAPI\YahooFinanceAPI_CS\bin\Release\YahooFinanceAPI.exe
+G:\Software Code\Metatrader\YahooFinanceAPI\YahooFinanceAPI_CS\bin\Release\YahooFinanceAPI.pdb
+G:\Software Code\Metatrader\YahooFinanceAPI\YahooFinanceAPI_CS\obj\Release\YahooFinanceAPI.exe
+G:\Software Code\Metatrader\YahooFinanceAPI\YahooFinanceAPI_CS\obj\Release\YahooFinanceAPI.pdb
+H:\YahooFinanceAPI\YahooFinanceAPI_CS\obj\Release\YahooFinanceAPI.exe
+H:\YahooFinanceAPI\YahooFinanceAPI_CS\obj\Release\YahooFinanceAPI.pdb
+H:\YahooFinanceAPI\YahooFinanceAPI_CS\bin\Release\YahooFinanceAPI.exe
+H:\YahooFinanceAPI\YahooFinanceAPI_CS\bin\Release\YahooFinanceAPI.pdb
