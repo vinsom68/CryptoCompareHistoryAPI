@@ -18,4 +18,3 @@ H:\IB\Zorro\CryptoCompareHistoryAPI.pdb
 H:\IB\CryptoCompareHistoryAPIXX\CryptoCompareHistoryAPI\obj\Debug\CryptoCompareHistoryAPI.csprojResolveAssemblyReference.cache
 H:\IB\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\obj\Debug\CryptoCompareHistoryAPI.exe
 H:\IB\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\obj\Debug\CryptoCompareHistoryAPI.pdb
-H:\IB\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\obj\Debug\CryptoCompareHistoryAPI.csprojResolveAssemblyReference.cache

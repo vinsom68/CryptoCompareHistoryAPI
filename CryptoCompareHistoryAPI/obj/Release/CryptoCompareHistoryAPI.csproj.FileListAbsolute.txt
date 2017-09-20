@@ -8,3 +8,13 @@ E:\CryptoCompareHistoryAPI\YahooFinanceAPI_CS\bin\Release\Newtonsoft.Json.xml
 E:\CryptoCompareHistoryAPI\YahooFinanceAPI_CS\obj\Release\CryptoCompareHistoryAPI.csprojResolveAssemblyReference.cache
 E:\CryptoCompareHistoryAPI\YahooFinanceAPI_CS\obj\Release\CryptoCompareHistoryAPI.exe
 E:\CryptoCompareHistoryAPI\YahooFinanceAPI_CS\obj\Release\CryptoCompareHistoryAPI.pdb
+H:\IB\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\bin\Release\CryptoCompareHistoryAPI.exe.config
+H:\IB\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\obj\Release\CryptoCompareHistoryAPI.exe
+H:\IB\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\obj\Release\CryptoCompareHistoryAPI.pdb
+H:\IB\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\bin\Release\CryptoCompareHistoryAPI.exe
+H:\IB\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\bin\Release\CryptoCompareHistoryAPI.pdb
+H:\IB\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\bin\Release\Json.Net35.dll
+H:\IB\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\bin\Release\Newtonsoft.Json.dll
+H:\IB\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\bin\Release\Json.Net35.pdb
+H:\IB\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\bin\Release\Newtonsoft.Json.xml
+H:\IB\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\obj\Release\CryptoCompareHistoryAPI.csprojResolveAssemblyReference.cache
