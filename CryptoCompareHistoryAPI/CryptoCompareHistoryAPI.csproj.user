@@ -3,6 +3,6 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <StartAction>Project</StartAction>
     <StartProgram>..\..\..\Zorro\Zorro.exe</StartProgram>
-    <StartArguments>ETC/BTC 1440</StartArguments>
+    <StartArguments>1ST/ETH 1440</StartArguments>
   </PropertyGroup>
 </Project>

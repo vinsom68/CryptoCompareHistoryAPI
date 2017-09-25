@@ -128,13 +128,13 @@ namespace CryptoCompareAPI
                 int pos=symbol.IndexOf("BTC");
                 if(pos==-1)
                     pos = symbol.IndexOf("LTC");
-                else if (pos == -1)
+                if (pos == -1)
                     pos = symbol.IndexOf("ETH");
-                else if (pos == -1)
+                if (pos == -1)
                     pos = symbol.IndexOf("DOGE");
-                else if (pos == -1)
+                if (pos == -1)
                     pos = symbol.IndexOf("USD");
-                else if(pos<0)
+                if(pos<0)
                     throw new Exception("ERROR: Pair not found " + symbol);
 
                 string fsym = symbol.Substring(0, pos);
