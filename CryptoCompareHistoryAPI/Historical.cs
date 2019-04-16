@@ -28,9 +28,26 @@ namespace CryptoCompareAPI
         MIN21600 = 21600
     };
 
+    public enum EXCHANGES
+    {
+        CCCAGG,
+        Binance
+    }
+
+    public enum LIMIT
+    {
+        Max
+    }
+
     public class Historical
     {
-
+        public static string MainSymbol = string.Empty;
+        //"https://min-api.cryptocompare.com/data/" + action + "?fsym=" + fsym + "&tsym=" + tsym + "&limit=" + limit + "&aggregate=" + aggregate + "&e=CCCAGG&toTs=" + toTs;
+        public static string CryptoCompURL="https://min-api.cryptocompare.com/data/{0}?fsym={1}&tsym={2}&limit={3}&aggregate={4}&e={5}&toTs={6}";
+        public static string BinanceURL = "https://api.binance.com/api/v1/klines?symbol={0}&interval=1h&endTime={1}&limit=1000";
+        public static EXCHANGES exchange = EXCHANGES.CCCAGG;
+        public static string limit = "2000";
+        private static int Maxlimit = 2000;
         /// <summary>
         /// Get stock historical price from Yahoo Finance
         /// </summary>
@@ -49,10 +66,10 @@ namespace CryptoCompareAPI
                 {
                     end = RawDataStartDate;
                     string jsonData = GetRaw(symbol, start, end, TimeFrame);
-                    if (jsonData != null)
+                    if (jsonData != null && jsonData != "[]")
                     {
                         dynamic obj = JsonConvert.DeserializeObject(jsonData);
-                        var DataArr = ((IEnumerable<dynamic>) obj["Data"]);
+                        var DataArr = ((IEnumerable<dynamic>)obj["Data"]);
                         var lastElem = DataArr.ElementAt(DataArr.Count() - 2);
 
                         if (lastElem["open"].ToString() == "0" || lastElem["open"].ToString() == "null" ||
@@ -71,7 +88,7 @@ namespace CryptoCompareAPI
                             if (x == DataArr.ElementAt(0))
                                 RawDataStartDate = UnixTs;
 
-                            if (x["open"].ToString() != "0" && x["open"].ToString()!="null" && !string.IsNullOrEmpty( x["open"].ToString()))
+                            if (x["open"].ToString() != "0" && x["open"].ToString() != "null" && !string.IsNullOrEmpty(x["open"].ToString()))
                             {
                                 string time =
                                     UnixTimestampToDateTime(System.Convert.ToDouble(x["time"].ToString()))
@@ -82,12 +99,16 @@ namespace CryptoCompareAPI
                                     System.Convert.ToDouble(x["low"]).ToString("0.0000000000"),
                                     System.Convert.ToDouble(x["close"]).ToString("0.0000000000"),
                                     System.Convert.ToDouble(x["close"]).ToString("0.0000000000"),
-                                    System.Convert.ToDouble(x["volumeto"]).ToString("0.0000000000"));
+                                    //System.Convert.ToDouble(x["volumeto"]).ToString("0.0000000000"));
+                                    exchange==EXCHANGES.Binance? System.Convert.ToDouble(x["volumefrom"]).ToString("0.0000000000"):System.Convert.ToDouble(x["volumeto"]).ToString("0.0000000000"));
 
                                 HistoryPrices.Add(data);
                             }
                         }
                     }
+
+                    if (Maxlimit.ToString() != limit)
+                        break;
                 }
 
 
@@ -106,7 +127,7 @@ namespace CryptoCompareAPI
                 Debug.Print(ex.Message);
             }
 
-            return HistoryPrices.Count-1;
+            return HistoryPrices.Count - 1;
 
         }
 
@@ -125,47 +146,57 @@ namespace CryptoCompareAPI
 
             try
             {
-                int pos=symbol.IndexOf("BTC");
-                if(pos==-1)
-                    pos = symbol.IndexOf("LTC");
-                if (pos == -1)
-                    pos = symbol.IndexOf("ETH");
-                if (pos == -1)
-                    pos = symbol.IndexOf("DOGE");
-                if (pos == -1)
-                    pos = symbol.IndexOf("USD");
-                if(pos<0)
+                int pos = symbol.IndexOf("BTC", 2);
+                if (pos <= 0)
+                    pos = symbol.IndexOf("LTC", 2);
+                if (pos <= 0)
+                    pos = symbol.IndexOf("ETH", 2);
+                if (pos <= 0)
+                    pos = symbol.IndexOf("BNB", 2);
+                if (pos <= 0)
+                    pos = symbol.IndexOf("TUSD", 2);
+                if (pos <= 0)
+                    pos = symbol.IndexOf("USDT", 2);
+                if (pos <= 0)
+                    pos = symbol.IndexOf("USD", 2);
+                if (pos <= 0)
                     throw new Exception("ERROR: Pair not found " + symbol);
 
                 string fsym = symbol.Substring(0, pos);
                 string tsym = symbol.Substring(pos, symbol.Length - fsym.Length);
-                string limit = "2000";
+                MainSymbol = tsym;
+                
                 string toTs = ((int)DateTimeToUnixTimestamp(end)).ToString();
                 string aggregate = "1";
-	            string action = "histominute";
+                string action = "histominute";
                 if (timeFrame == TIMEFRAME.MIN1 || timeFrame == TIMEFRAME.MIN15 || timeFrame == TIMEFRAME.MIN30)
-	            {
-		            action = "histominute";
+                {
+                    action = "histominute";
                     aggregate = timeFrame.ToString();
-	            }
+                }
                 else if (timeFrame == TIMEFRAME.MIN60 || timeFrame == TIMEFRAME.MIN240)
-	            {
-		            action = "histohour";
-		            aggregate = "1";
+                {
+                    action = "histohour";
+                    aggregate = "1";
                     if (timeFrame == TIMEFRAME.MIN240)
-			            aggregate = "4";
-	            }
+                        aggregate = "4";
+                }
                 else if (timeFrame == TIMEFRAME.MIN1440 || timeFrame != TIMEFRAME.MIN10080 || timeFrame != TIMEFRAME.MIN21600)
-	            {
-		            action = "histoday";
-		            aggregate = "1";
+                {
+                    action = "histoday";
+                    aggregate = "1";
                     if (timeFrame == TIMEFRAME.MIN10080)
-			            aggregate = "7";
+                        aggregate = "7";
                     if (timeFrame == TIMEFRAME.MIN21600)
-			            aggregate = "30";
-	            }
+                        aggregate = "30";
+                }
 
-                string url = "https://min-api.cryptocompare.com/data/" + action + "?fsym=" + fsym + "&tsym=" + tsym + "&limit=" + limit + "&aggregate=" + aggregate + "&e=CCCAGG&toTs=" + toTs;
+                //string url = "https://min-api.cryptocompare.com/data/" + action + "?fsym=" + fsym + "&tsym=" + tsym + "&limit=" + limit + "&aggregate=" + aggregate + "&e=CCCAGG&toTs=" + toTs;
+                string url = string.Format(CryptoCompURL, action, fsym, tsym, limit, aggregate, exchange.ToString(), toTs);
+                //else
+                    //url = "https://min-api.cryptocompare.com/data/" + action + "?fsym=" + fsym + "&tsym=" + tsym + "&limit=" + limit + "&aggregate=" + aggregate + "&e=CCCAGG&toTs=" + toTs;
+                //url = string.Format(BinanceURL,  fsym+tsym, toTs);
+
 
 
                 using (WebClient wc = new WebClient())
@@ -260,7 +291,39 @@ namespace CryptoCompareAPI
 
         #endregion
 
+        public static void GetTopListByVolume()
+        {
+            if (string.IsNullOrEmpty(MainSymbol))
+                throw new Exception("GetTopListByVolume Symbol is undefined");
+
+            string url = "https://min-api.cryptocompare.com/data//top/volumes?tsym=" + MainSymbol;
+            string jsonData = null;
+            string csv = string.Empty;
+
+            using (WebClient wc = new WebClient())
+            {
+                jsonData = wc.DownloadString(url);
+            }
+
+            if (jsonData != null)
+            {
+                dynamic obj = JsonConvert.DeserializeObject(jsonData);
+                var DataArr = ((IEnumerable<dynamic>)obj["Data"]);
+
+                foreach (var x in DataArr)
+                {
+                    csv += x["SYMBOL"].ToString() + "/" + MainSymbol + ",";
+                }
+            }
+
+            csv.TrimEnd(',');
+            if (!string.IsNullOrEmpty(csv))
+                System.IO.File.WriteAllText(@"history\" + MainSymbol + "TopListByVolume.csv", csv);
+
+        }
+
     }
+
 
     public class HistoryPrice
     {

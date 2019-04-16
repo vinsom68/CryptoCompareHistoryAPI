@@ -21,3 +21,14 @@ H:\IB\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\obj\Debug\CryptoCompareHis
 E:\IB\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\obj\Debug\CryptoCompareHistoryAPI.exe
 E:\IB\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\obj\Debug\CryptoCompareHistoryAPI.pdb
 E:\IB\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\obj\Debug\CryptoCompareHistoryAPI.csprojResolveAssemblyReference.cache
+G:\Software Code\Metatrader\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI.exe.config
+G:\Software Code\Metatrader\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\obj\Debug\CryptoCompareHistoryAPI.exe
+G:\Software Code\Metatrader\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\obj\Debug\CryptoCompareHistoryAPI.pdb
+G:\Software Code\Metatrader\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\bin\Debug\CryptoCompareHistoryAPI.exe.config
+G:\Software Code\Metatrader\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\bin\Debug\CryptoCompareHistoryAPI.exe
+G:\Software Code\Metatrader\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\bin\Debug\CryptoCompareHistoryAPI.pdb
+G:\Software Code\Metatrader\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\bin\Debug\Json.Net35.dll
+G:\Software Code\Metatrader\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\bin\Debug\Newtonsoft.Json.dll
+G:\Software Code\Metatrader\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\bin\Debug\Json.Net35.pdb
+G:\Software Code\Metatrader\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\bin\Debug\Newtonsoft.Json.xml
+G:\Software Code\Metatrader\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\obj\Debug\CryptoCompareHistoryAPI.csprojResolveAssemblyReference.cache

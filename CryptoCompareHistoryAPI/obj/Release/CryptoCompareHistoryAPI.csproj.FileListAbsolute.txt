@@ -28,3 +28,13 @@ E:\IB\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\bin\Release\Newtonsoft.Jso
 E:\IB\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\bin\Release\Json.Net35.pdb
 E:\IB\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\bin\Release\Newtonsoft.Json.xml
 E:\IB\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\obj\Release\CryptoCompareHistoryAPI.csprojResolveAssemblyReference.cache
+G:\Software Code\Metatrader\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\bin\Release\CryptoCompareHistoryAPI.exe.config
+G:\Software Code\Metatrader\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\obj\Release\CryptoCompareHistoryAPI.exe
+G:\Software Code\Metatrader\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\obj\Release\CryptoCompareHistoryAPI.pdb
+G:\Software Code\Metatrader\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\bin\Release\CryptoCompareHistoryAPI.exe
+G:\Software Code\Metatrader\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\bin\Release\CryptoCompareHistoryAPI.pdb
+G:\Software Code\Metatrader\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\bin\Release\Json.Net35.dll
+G:\Software Code\Metatrader\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\bin\Release\Newtonsoft.Json.dll
+G:\Software Code\Metatrader\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\bin\Release\Json.Net35.pdb
+G:\Software Code\Metatrader\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\bin\Release\Newtonsoft.Json.xml
+G:\Software Code\Metatrader\CryptoCompareHistoryAPI\CryptoCompareHistoryAPI\obj\Release\CryptoCompareHistoryAPI.csprojResolveAssemblyReference.cache
