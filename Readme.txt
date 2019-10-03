@@ -45,4 +45,4 @@ var dataFromCryptoCompare(string Code, int timeframe)
 
 
 - Donations Bitcoin Addrsss:
-14pVs5vPhKmQVJsCmZNCjpgD1qfn2X57eJ
+3KgJh9QUrWJBDKiDjLupVY3fqwgmkdUPzM
